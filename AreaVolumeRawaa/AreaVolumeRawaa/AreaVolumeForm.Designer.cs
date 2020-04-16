@@ -41,7 +41,7 @@
             this.txtHeigthTrapezoid = new System.Windows.Forms.TextBox();
             this.lblArea = new System.Windows.Forms.Label();
             this.lblAreaAnswer = new System.Windows.Forms.Label();
-            this.btnCalculate = new System.Windows.Forms.Button();
+            this.btnCalculateT = new System.Windows.Forms.Button();
             this.lblRadiusSphere = new System.Windows.Forms.Label();
             this.txtRadiusSphere = new System.Windows.Forms.TextBox();
             this.lblVolume = new System.Windows.Forms.Label();
@@ -54,6 +54,8 @@
             this.lblVolumeC = new System.Windows.Forms.Label();
             this.lblLengthB = new System.Windows.Forms.Label();
             this.txtLengthB = new System.Windows.Forms.TextBox();
+            this.btnCalculateS = new System.Windows.Forms.Button();
+            this.btnCalculateC = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,7 +93,7 @@
             // mniExit
             // 
             this.mniExit.Name = "mniExit";
-            this.mniExit.Size = new System.Drawing.Size(270, 34);
+            this.mniExit.Size = new System.Drawing.Size(141, 34);
             this.mniExit.Text = "Exit";
             this.mniExit.Click += new System.EventHandler(this.mniExit_Click);
             // 
@@ -108,21 +110,21 @@
             // mniTrapezoid
             // 
             this.mniTrapezoid.Name = "mniTrapezoid";
-            this.mniTrapezoid.Size = new System.Drawing.Size(270, 34);
+            this.mniTrapezoid.Size = new System.Drawing.Size(190, 34);
             this.mniTrapezoid.Text = "Trapezoid";
             this.mniTrapezoid.Click += new System.EventHandler(this.mniTrapezoid_Click);
             // 
             // mniSphere
             // 
             this.mniSphere.Name = "mniSphere";
-            this.mniSphere.Size = new System.Drawing.Size(270, 34);
+            this.mniSphere.Size = new System.Drawing.Size(190, 34);
             this.mniSphere.Text = "Sphere ";
             this.mniSphere.Click += new System.EventHandler(this.mniSphere_Click);
             // 
             // mniCylinder
             // 
             this.mniCylinder.Name = "mniCylinder";
-            this.mniCylinder.Size = new System.Drawing.Size(270, 34);
+            this.mniCylinder.Size = new System.Drawing.Size(190, 34);
             this.mniCylinder.Text = "Cylinder";
             this.mniCylinder.Click += new System.EventHandler(this.mniCylinder_Click);
             // 
@@ -164,22 +166,22 @@
             // 
             this.lblAreaAnswer.AutoSize = true;
             this.lblAreaAnswer.Font = new System.Drawing.Font("Microsoft Tai Le", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAreaAnswer.Location = new System.Drawing.Point(574, 486);
+            this.lblAreaAnswer.Location = new System.Drawing.Point(594, 486);
             this.lblAreaAnswer.Name = "lblAreaAnswer";
             this.lblAreaAnswer.Size = new System.Drawing.Size(59, 40);
             this.lblAreaAnswer.TabIndex = 6;
             this.lblAreaAnswer.Text = "???";
             // 
-            // btnCalculate
+            // btnCalculateT
             // 
-            this.btnCalculate.Font = new System.Drawing.Font("Microsoft Tai Le", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculate.Location = new System.Drawing.Point(915, 370);
-            this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(195, 51);
-            this.btnCalculate.TabIndex = 7;
-            this.btnCalculate.Text = "Calculate";
-            this.btnCalculate.UseVisualStyleBackColor = true;
-            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
+            this.btnCalculateT.Font = new System.Drawing.Font("Microsoft Tai Le", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalculateT.Location = new System.Drawing.Point(915, 370);
+            this.btnCalculateT.Name = "btnCalculateT";
+            this.btnCalculateT.Size = new System.Drawing.Size(195, 51);
+            this.btnCalculateT.TabIndex = 7;
+            this.btnCalculateT.Text = "Calculate";
+            this.btnCalculateT.UseVisualStyleBackColor = true;
+            this.btnCalculateT.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // lblRadiusSphere
             // 
@@ -290,11 +292,35 @@
             this.txtLengthB.Size = new System.Drawing.Size(173, 26);
             this.txtLengthB.TabIndex = 19;
             // 
+            // btnCalculateS
+            // 
+            this.btnCalculateS.Font = new System.Drawing.Font("Microsoft Tai Le", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalculateS.Location = new System.Drawing.Point(915, 292);
+            this.btnCalculateS.Name = "btnCalculateS";
+            this.btnCalculateS.Size = new System.Drawing.Size(195, 51);
+            this.btnCalculateS.TabIndex = 20;
+            this.btnCalculateS.Text = "Calculate";
+            this.btnCalculateS.UseVisualStyleBackColor = true;
+            this.btnCalculateS.Click += new System.EventHandler(this.btnCalculateS_Click);
+            // 
+            // btnCalculateC
+            // 
+            this.btnCalculateC.Font = new System.Drawing.Font("Microsoft Tai Le", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalculateC.Location = new System.Drawing.Point(915, 219);
+            this.btnCalculateC.Name = "btnCalculateC";
+            this.btnCalculateC.Size = new System.Drawing.Size(195, 51);
+            this.btnCalculateC.TabIndex = 21;
+            this.btnCalculateC.Text = "Calculate";
+            this.btnCalculateC.UseVisualStyleBackColor = true;
+            this.btnCalculateC.Click += new System.EventHandler(this.btnCalculateC_Click);
+            // 
             // frmAreaVolume
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.Controls.Add(this.btnCalculateC);
+            this.Controls.Add(this.btnCalculateS);
             this.Controls.Add(this.txtLengthB);
             this.Controls.Add(this.lblLengthB);
             this.Controls.Add(this.lblVolumeC);
@@ -307,7 +333,7 @@
             this.Controls.Add(this.lblVolume);
             this.Controls.Add(this.txtRadiusSphere);
             this.Controls.Add(this.lblRadiusSphere);
-            this.Controls.Add(this.btnCalculate);
+            this.Controls.Add(this.btnCalculateT);
             this.Controls.Add(this.lblAreaAnswer);
             this.Controls.Add(this.lblArea);
             this.Controls.Add(this.txtHeigthTrapezoid);
@@ -342,7 +368,7 @@
         private System.Windows.Forms.TextBox txtHeigthTrapezoid;
         private System.Windows.Forms.Label lblArea;
         private System.Windows.Forms.Label lblAreaAnswer;
-        private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.Button btnCalculateT;
         private System.Windows.Forms.Label lblRadiusSphere;
         private System.Windows.Forms.TextBox txtRadiusSphere;
         private System.Windows.Forms.Label lblVolume;
@@ -355,6 +381,8 @@
         private System.Windows.Forms.Label lblVolumeC;
         private System.Windows.Forms.Label lblLengthB;
         private System.Windows.Forms.TextBox txtLengthB;
+        private System.Windows.Forms.Button btnCalculateS;
+        private System.Windows.Forms.Button btnCalculateC;
     }
 }
 

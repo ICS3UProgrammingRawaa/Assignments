@@ -38,7 +38,9 @@ namespace AreaVolumeRawaa
             this.txtLengthB.Hide();
 
             // hide the calculate button
-            this.btnCalculate.Hide();
+            this.btnCalculateT.Hide();
+            this.btnCalculateS.Hide();
+            this.btnCalculateC.Hide();
 
             // hide the labels and textboxes for sphere
             this.lblRadiusSphere.Hide();
@@ -69,7 +71,7 @@ namespace AreaVolumeRawaa
             this.txtLengthB.Show();
 
             // show the calculate button
-            this.btnCalculate.Show();
+            this.btnCalculateT.Show();
 
             // hide the labels and textboxes for sphere
             this.lblRadiusSphere.Hide();
@@ -95,7 +97,7 @@ namespace AreaVolumeRawaa
             this.txtRadiusSphere.Show();
 
             // show the calculate button
-            this.btnCalculate.Show();
+            this.btnCalculateS.Show();
 
             // hide the labels and textboxes for trapezoid
             this.lblLengthA.Hide();
@@ -137,7 +139,7 @@ namespace AreaVolumeRawaa
             this.lblVolumeC.Show();
 
             // show the calculate button
-            this.btnCalculate.Show();
+            this.btnCalculateC.Show();
 
             // hide the labels and textboxes for trapezoid
             this.lblLengthA.Hide();
@@ -160,6 +162,7 @@ namespace AreaVolumeRawaa
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
+            
             // local variables for trapezoid
             double lengthA, lengthB, height, area;
 
@@ -177,6 +180,11 @@ namespace AreaVolumeRawaa
             // show the answer label
             this.lblAreaAnswer.Show();
 
+
+        }
+
+        private void btnCalculateS_Click(object sender, EventArgs e)
+        {
             // local variables for sphere
             double radiusS, volumeS;
 
@@ -191,7 +199,10 @@ namespace AreaVolumeRawaa
 
             // show the answer label
             this.lblVolumeSphere.Show();
+        }
 
+        private void btnCalculateC_Click(object sender, EventArgs e)
+        {
             // local variables for cylinder 
             double radiusC, heightC, volumeC;
 
@@ -207,9 +218,6 @@ namespace AreaVolumeRawaa
 
             // show the answer label
             this.lblVolumeCylinder.Show();
-
-
-
         }
     }
 }
